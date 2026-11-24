@@ -2,8 +2,6 @@
 
 Site responsivo em HTML, CSS e JavaScript puro.
 
-## Como visualizar
-Abra `index.html` no navegador. Mantenha a pasta `assets` junto dos arquivos.
 
 ## Funcionalidades
 - Banner oficial da coleção no hero.

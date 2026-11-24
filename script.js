@@ -71,7 +71,7 @@ const products = [
   {
     id: 8, name: "Vila dos Gingers", category: "kits", tag: "Com recheio surpresa",
     description: "Uma pequena vila natalina, feita de biscoito e decorada artesanalmente com glacê real. Uma composição encantadora com uma deliciosa surpresa!",
-    detail: "Base de biscoito + casinha de aproximadamente 7 x 7 cm com portinha aberta + recheio de jujubas + árvore decorada + boneco de neve ou gingerbread conforme disponibilidade",
+    detail: "Base de biscoito + casinha de aproximadamente 7 x 7 cm com portinha aberta + Recheada com mini gingers",
     price: 49.90, image: "assets/images/vila-gingers.jpg", bg: "#ead9c6",
     options: [
       { label: "Escolha o sabor", values: ["Panetone com Frutas", "Mel com Especiarias"] }

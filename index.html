@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Coleção Especial de Natal da Lisianthus Biscoiteria. Biscoitos artesanais feitos com carinho para presentear e celebrar."
+    />
+    <title>Lisianthus Biscoiteria | Coleção Especial de Natal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="announcement">
+      ✦ Produção artesanal em edição especial de Natal ✦
+    </div>
+
+    <header class="site-header">
+      <a class="brand" href="#inicio" aria-label="Lisianthus Biscoiteria - início">
+        <img
+          class="brand-logo"
+          src="assets/images/logo-lisianthus.png"
+          alt="Lisianthus Biscoiteria"
+          width="100"
+          height="150"
+        />
+      </a>
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        aria-label="Abrir menu"
+        aria-expanded="false"
+      >
+        ☰
+      </button>
+      <nav class="nav" id="mainNav">
+        <a href="#inicio">Início</a>
+        <a href="#catalogo">Catálogo</a>
+        <a href="#sobre">Nossa magia</a>
+        <a href="#encomendas">Encomendas</a>
+      </nav>
+      <button class="cart-button" id="openCart" aria-label="Abrir sacola">
+        Sacola <span id="cartCount">0</span>
+      </button>
+    </header>
+
+    <main>
+      <section class="hero hero-banner" id="inicio" aria-label="Coleção Especial de Natal Lisianthus">
+        <img
+          class="hero-banner-image"
+          src="assets/images/hero-natal.png"
+          alt="Lisianthus Biscoiteria — Natal. Uma coleção de pequenos encantos natalinos."
+          fetchpriority="high"
+        />
+      </section>
+
+      <section class="benefits" aria-label="Diferenciais">
+        <div>
+          <span>✿</span>
+          <p><b>Artesanais</b><small>Feitos com cuidado</small></p>
+        </div>
+        <div>
+          <span>♡</span>
+          <p><b>Presentes especiais</b><small>Detalhes que encantam</small></p>
+        </div>
+        <div>
+          <span>✧</span>
+          <p><b>Edição limitada</b><small>Para um Natal único</small></p>
+        </div>
+      </section>
+
+      <section class="catalog-section" id="catalogo">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">ESCOLHA SEUS FAVORITOS</span>
+            <h2>Nosso catálogo <em>natalino</em></h2>
+          </div>
+          <p>
+            Uma seleção de delícias para presentear, decorar a mesa e
+            compartilhar bons momentos.
+          </p>
+        </div>
+        <div class="catalog-tools">
+          <div class="filters" id="filters">
+            <button class="filter active" data-filter="todos">Todos</button>
+            <button class="filter" data-filter="presentes">
+              Para presentear
+            </button>
+            <button class="filter" data-filter="kits">Kits & caixas</button>
+            <button class="filter" data-filter="diversao">Experiências</button>
+          </div>
+          <label class="search-box"
+            ><span>⌕</span
+            ><input
+              id="searchInput"
+              type="search"
+              placeholder="Buscar um produto..."
+              aria-label="Buscar produtos"
+          /></label>
+        </div>
+        <div class="product-grid" id="productGrid"></div>
+        <p class="empty-state" id="emptyState" hidden>
+          Nenhum produto encontrado. Tente outra busca. ♡
+        </p>
+      </section>
+
+      <section class="feature-banner" id="sobre">
+        <div class="feature-illustration">
+          <span class="big-cookie">❄</span><span class="tiny-cookie">♡</span>
+        </div>
+        <div>
+          <span class="eyebrow">UM TOQUE DE CARINHO</span>
+          <h2>O sabor do Natal<br /><em>mora nos detalhes.</em></h2>
+          <p>
+            Cada biscoito é uma pequena celebração: decoração delicada, aromas
+            especiais e aquele cuidado que transforma um presente em lembrança.
+          </p>
+          <a href="#catalogo" class="text-link"
+            >Conheça a coleção <span>→</span></a
+          >
+        </div>
+      </section>
+
+      <section class="order-section" id="encomendas">
+        <span class="eyebrow">VAMOS ADOÇAR SEU NATAL?</span>
+        <h2>Seu momento especial<br />começa com um <em>biscoito.</em></h2>
+        <p>
+          Escolha seus produtos no catálogo e envie sua lista pelo WhatsApp.
+          Confirmaremos disponibilidade, prazo e entrega.
+        </p>
+        <button class="primary-button" id="orderNow">
+          Fazer uma encomenda <span>↗</span>
+        </button>
+        <small>Encomendas sujeitas à disponibilidade de produção.</small>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <a class="brand footer-brand" href="#inicio" aria-label="Lisianthus Biscoiteria - início">
+        <span><strong>Lisianthus</strong><small>Biscoiteria</small></span>
+      </a
+      >
+      <p>Feito à mão para celebrar momentos doces.</p>
+      <span
+        >© <span id="year"></span> Lisianthus Biscoiteria. Todos os direitos
+        reservados.</span
+      >
+    </footer>
+
+    <div class="cart-overlay" id="cartOverlay" aria-hidden="true">
+      <aside
+        class="cart-panel"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="cartTitle"
+      >
+        <div class="cart-header">
+          <div>
+            <span class="eyebrow">SUA SELEÇÃO</span>
+            <h2 id="cartTitle">Sacola de Natal</h2>
+          </div>
+          <button class="close-cart" id="closeCart" aria-label="Fechar sacola">
+            ×
+          </button>
+        </div>
+        <div class="cart-items" id="cartItems">
+          <p class="cart-empty">
+            Sua sacola ainda está vazia. Que tal escolher algumas delícias? ♡
+          </p>
+        </div>
+        <div class="cart-footer">
+          <div class="cart-total">
+            <span>Subtotal</span><strong id="cartTotal">R$ 0,00</strong>
+          </div>
+          <small
+            >Entrega e disponibilidade serão confirmadas no atendimento.</small
+          ><button class="primary-button checkout-button" id="checkoutButton">
+            Enviar pedido pelo WhatsApp ↗
+          </button>
+        </div>
+      </aside>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
